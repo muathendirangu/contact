@@ -2,11 +2,28 @@
  * import the required external modules and interfaces
  */
 import winston from "winston";
-import morgan from "morgan";
 
 const { combine, timestamp, json } = winston.format;
 
-export const logger = winston.createLogger({
+interface ILoggerConfig {
+    levels: typeof winston.config.syslog.levels;
+    format: winston.Logform.Format;
+    defaultMeta: { [key: string]: any };
+    transports: winston.transport[] | winston.transport;
+    exceptionHandlers: any;
+}
+
+function createLogger(config: ILoggerConfig): winston.Logger {
+    return winston.createLogger({
+      levels: config.levels,
+      format: config.format,
+      defaultMeta: config.defaultMeta,
+      transports: config.transports,
+      exceptionHandlers: config.exceptionHandlers,
+    });
+  }
+
+  const loggerConfig: ILoggerConfig = {
     levels: winston.config.syslog.levels,
     format: combine(
         timestamp({
@@ -19,5 +36,7 @@ export const logger = winston.createLogger({
     exceptionHandlers: [
         new winston.transports.Console(),
       ]
-});
+}
+
+export const logger = createLogger(loggerConfig);
 
