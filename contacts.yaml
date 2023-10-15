@@ -1,0 +1,694 @@
+openapi: 3.0.3
+info:
+  title: contacts APIs
+  description: contacts APIs
+  version: 1.0.0
+  contact: {}
+servers:
+- url: '{{url}}'
+paths:
+  /api/contacts:
+    get:
+      summary: get contacts
+      description: get contacts
+      operationId: getContacts
+      responses:
+        '200':
+          description: get contacts
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '3670'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: 'default-src ''self'';base-uri ''self'';font-src ''self'' https: data:;form-action ''self'';frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Date:
+              schema:
+                type: string
+                example: Sun, 15 Oct 2023 19:17:33 GMT
+            ETag:
+              schema:
+                type: string
+                example: W/"e56-TPZjgc+GdwyaQczcetkPEd4Z4h0"
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: ?1
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: off
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: '0'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 11cecc98-bee9-42f4-ac28-859c5bc625f7
+                    name:
+                      type: string
+                      example: John Wafula
+                    phoneNumber:
+                      type: string
+                      example: '0719567380'
+                example:
+                - id: 11cecc98-bee9-42f4-ac28-859c5bc625f7
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: aff4006b-0e5b-4d51-80f4-2460a42a2fae
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: dc9edd7d-761c-4fb4-97ca-f07375f4cd98
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 74224dfc-8c22-45a7-bdf3-c305221b2c9e
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: d4e09751-8693-4ffd-bf6b-16c23fa0cc19
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 169a64a7-3cce-4dd2-aa43-4c68a61f4e49
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: ab851de1-3c3b-47f3-be4b-b6d0bb7e2411
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 20e082e1-c97d-4d9b-91e7-272dbb1c5373
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 3597b13e-a779-48e0-843f-e4cae3196826
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 7728b500-7216-4b39-9d7b-251a644ee3e9
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: e19c1091-244f-48d5-a6c4-e13d95e0e37c
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 9e85b51c-e935-44c6-a190-67011ebcb60f
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 6cab6d5e-04bb-4d31-b040-4794f2f7f1d3
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: d2e04934-70af-4011-92f4-5d113e1ac657
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 94908501-574a-42e4-8688-18faaeba39ff
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: aeab4bb9-246a-457a-a03f-c264df9f4573
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 6683798b-99c1-41b5-91a0-9c5bdd802d3b
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 8343a10c-ee61-4e6b-b496-657a4338ba67
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 638d86a0-8212-41f2-b64b-804e4f96f259
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: ce3d1551-d090-4491-857d-04958b2ec87f
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 3b6892ce-28e9-4487-8c7f-7ad71dc7128d
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 39a18982-fff5-4a52-b972-5f77064690e2
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 863bbbe0-ab8e-493f-8f67-8ecddc9c0241
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 528b56fd-0ac7-4aea-ae1b-4d28cd2fcaff
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 412720d9-8297-486b-b823-022c8d4c84ab
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: ccaaef6b-d2b9-414f-9b8b-3e9f6341d806
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 40a2982e-518e-42f7-828e-af83c5cb194a
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 9c3110a6-8323-4ef8-bd7a-270a38824b13
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: db067438-6b52-491f-8245-0eca881d2498
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 2a6c61ff-854c-402f-9b8b-1750b47266c5
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 568f351f-376c-4f60-a7f8-6a5f284ba01b
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: a1e4e14b-195f-44d2-885c-8dd2638be6c8
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: e9424772-dfb3-4716-bc6c-5044ef1c4bb6
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 6f596a7a-ef2e-472f-b84b-04494cb3f15f
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 444af030-5139-4640-bb5c-97a4260a1a03
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: e64ba918-36d9-4b14-826a-0bb2c76a379d
+                  name: James Mwangi
+                  phoneNumber: '0719567380'
+                - id: bafccd7d-9bd7-4c03-9bae-3116149e5456
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: cb67b63c-51b1-413f-9523-4f43b3730a3a
+                  name: John Wafula
+                  phoneNumber: '0719567380'
+                - id: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                  name: Allison Baker
+                  phoneNumber: '0719567380'
+              examples:
+                get contacts:
+                  value:
+                  - id: 11cecc98-bee9-42f4-ac28-859c5bc625f7
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: aff4006b-0e5b-4d51-80f4-2460a42a2fae
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: dc9edd7d-761c-4fb4-97ca-f07375f4cd98
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 74224dfc-8c22-45a7-bdf3-c305221b2c9e
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: d4e09751-8693-4ffd-bf6b-16c23fa0cc19
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 169a64a7-3cce-4dd2-aa43-4c68a61f4e49
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: ab851de1-3c3b-47f3-be4b-b6d0bb7e2411
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 20e082e1-c97d-4d9b-91e7-272dbb1c5373
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 3597b13e-a779-48e0-843f-e4cae3196826
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 7728b500-7216-4b39-9d7b-251a644ee3e9
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: e19c1091-244f-48d5-a6c4-e13d95e0e37c
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 9e85b51c-e935-44c6-a190-67011ebcb60f
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 6cab6d5e-04bb-4d31-b040-4794f2f7f1d3
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: d2e04934-70af-4011-92f4-5d113e1ac657
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 94908501-574a-42e4-8688-18faaeba39ff
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: aeab4bb9-246a-457a-a03f-c264df9f4573
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 6683798b-99c1-41b5-91a0-9c5bdd802d3b
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 8343a10c-ee61-4e6b-b496-657a4338ba67
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 638d86a0-8212-41f2-b64b-804e4f96f259
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: ce3d1551-d090-4491-857d-04958b2ec87f
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 3b6892ce-28e9-4487-8c7f-7ad71dc7128d
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 39a18982-fff5-4a52-b972-5f77064690e2
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 863bbbe0-ab8e-493f-8f67-8ecddc9c0241
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 528b56fd-0ac7-4aea-ae1b-4d28cd2fcaff
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 412720d9-8297-486b-b823-022c8d4c84ab
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: ccaaef6b-d2b9-414f-9b8b-3e9f6341d806
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 40a2982e-518e-42f7-828e-af83c5cb194a
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 9c3110a6-8323-4ef8-bd7a-270a38824b13
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: db067438-6b52-491f-8245-0eca881d2498
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 2a6c61ff-854c-402f-9b8b-1750b47266c5
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 568f351f-376c-4f60-a7f8-6a5f284ba01b
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: a1e4e14b-195f-44d2-885c-8dd2638be6c8
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: e9424772-dfb3-4716-bc6c-5044ef1c4bb6
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 6f596a7a-ef2e-472f-b84b-04494cb3f15f
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 444af030-5139-4640-bb5c-97a4260a1a03
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: e64ba918-36d9-4b14-826a-0bb2c76a379d
+                    name: James Mwangi
+                    phoneNumber: '0719567380'
+                  - id: bafccd7d-9bd7-4c03-9bae-3116149e5456
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: cb67b63c-51b1-413f-9523-4f43b3730a3a
+                    name: John Wafula
+                    phoneNumber: '0719567380'
+                  - id: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                    name: Allison Baker
+                    phoneNumber: '0719567380'
+    post:
+      summary: create contact
+      description: create contact
+      operationId: createContact
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Allison Baker
+                phoneNumber:
+                  type: string
+                  example: '0719567380'
+            examples:
+              create contact:
+                value:
+                  name: Allison Baker
+                  phoneNumber: '0719567380'
+      responses:
+        '201':
+          description: create contact
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '136'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: 'default-src ''self'';base-uri ''self'';font-src ''self'' https: data:;form-action ''self'';frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Date:
+              schema:
+                type: string
+                example: Sun, 15 Oct 2023 19:16:59 GMT
+            ETag:
+              schema:
+                type: string
+                example: W/"88-sxr9mnwJy/amAMIHNdMcT3CdXuc"
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: ?1
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: off
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: '0'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                  name:
+                    type: string
+                    example: bd2453ecb855b77b9194019844305cd9
+                  phoneNumber:
+                    type: string
+                    example: b871bdb844f95e1b6efec6edd3694782
+              examples:
+                create contact:
+                  value:
+                    id: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                    name: bd2453ecb855b77b9194019844305cd9
+                    phoneNumber: b871bdb844f95e1b6efec6edd3694782
+  /api/contacts/{contactID}:
+    get:
+      summary: get contact
+      description: get contact
+      operationId: getContact
+      responses:
+        '200':
+          description: get contact
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '95'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: 'default-src ''self'';base-uri ''self'';font-src ''self'' https: data:;form-action ''self'';frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Date:
+              schema:
+                type: string
+                example: Sun, 15 Oct 2023 19:17:55 GMT
+            ETag:
+              schema:
+                type: string
+                example: W/"5f-RDLLMmpTri1CapzK9cdAszgvIG4"
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: ?1
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: off
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: '0'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                  name:
+                    type: string
+                    example: Allison Baker
+                  phoneNumber:
+                    type: string
+                    example: '0719567380'
+              examples:
+                get contact:
+                  value:
+                    id: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                    name: Allison Baker
+                    phoneNumber: '0719567380'
+    put:
+      summary: update contact
+      description: update contact
+      operationId: updateContact
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Mick Kibet
+                phoneNumber:
+                  type: string
+                  example: '07121434332'
+            examples:
+              update contact:
+                value:
+                  name: Mick Kibet
+                  phoneNumber: '07121434332'
+      responses:
+        '200':
+          description: update contact
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '136'
+            Content-Security-Policy:
+              schema:
+                type: string
+                example: 'default-src ''self'';base-uri ''self'';font-src ''self'' https: data:;form-action ''self'';frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+            Cross-Origin-Opener-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Cross-Origin-Resource-Policy:
+              schema:
+                type: string
+                example: same-origin
+            Date:
+              schema:
+                type: string
+                example: Sun, 15 Oct 2023 19:18:53 GMT
+            ETag:
+              schema:
+                type: string
+                example: W/"88-iWa9jRprr0hTMSfh9t1qvKv/I7c"
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: ?1
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: off
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Frame-Options:
+              schema:
+                type: string
+                example: SAMEORIGIN
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            X-XSS-Protection:
+              schema:
+                type: string
+                example: '0'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                  name:
+                    type: string
+                    example: a1db7ee84f30c2a657ac9add0f2030bb
+                  phoneNumber:
+                    type: string
+                    example: 0c133b3dfb2f25d3ab05c97de3fb83b5
+              examples:
+                update contact:
+                  value:
+                    id: 553e9c4c-df61-434e-9db4-0466b8fb08d4
+                    name: a1db7ee84f30c2a657ac9add0f2030bb
+                    phoneNumber: 0c133b3dfb2f25d3ab05c97de3fb83b5
+    delete:
+      summary: delete contact
+      description: delete contact
+      operationId: deleteContact
+      responses:
+        '200':
+          description: ''
+    parameters:
+    - name: contactID
+      in: path
+      required: true
+      schema:
+        type: string
+tags: []
+

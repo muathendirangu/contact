@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "af3f791c-3abc-4f09-8e33-5760732fd345",
+		"name": "contacts APIs",
+		"description": "contacts APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3655747"
+	},
+	"item": [
+		{
+			"name": "create contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Allison Baker\",\n    \"phoneNumber\" : \"0719567380\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/contacts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create contact",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Allison Baker\",\n    \"phoneNumber\" : \"0719567380\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "136"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"88-sxr9mnwJy/amAMIHNdMcT3CdXuc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 Oct 2023 19:16:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"553e9c4c-df61-434e-9db4-0466b8fb08d4\",\n    \"name\": \"bd2453ecb855b77b9194019844305cd9\",\n    \"phoneNumber\": \"b871bdb844f95e1b6efec6edd3694782\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/contacts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get contacts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"contacts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3670"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e56-TPZjgc+GdwyaQczcetkPEd4Z4h0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 Oct 2023 19:17:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"11cecc98-bee9-42f4-ac28-859c5bc625f7\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"aff4006b-0e5b-4d51-80f4-2460a42a2fae\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"dc9edd7d-761c-4fb4-97ca-f07375f4cd98\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"74224dfc-8c22-45a7-bdf3-c305221b2c9e\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"d4e09751-8693-4ffd-bf6b-16c23fa0cc19\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"169a64a7-3cce-4dd2-aa43-4c68a61f4e49\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"ab851de1-3c3b-47f3-be4b-b6d0bb7e2411\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"20e082e1-c97d-4d9b-91e7-272dbb1c5373\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"3597b13e-a779-48e0-843f-e4cae3196826\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"7728b500-7216-4b39-9d7b-251a644ee3e9\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"e19c1091-244f-48d5-a6c4-e13d95e0e37c\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"9e85b51c-e935-44c6-a190-67011ebcb60f\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"6cab6d5e-04bb-4d31-b040-4794f2f7f1d3\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"d2e04934-70af-4011-92f4-5d113e1ac657\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"94908501-574a-42e4-8688-18faaeba39ff\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"aeab4bb9-246a-457a-a03f-c264df9f4573\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"6683798b-99c1-41b5-91a0-9c5bdd802d3b\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"8343a10c-ee61-4e6b-b496-657a4338ba67\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"638d86a0-8212-41f2-b64b-804e4f96f259\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"ce3d1551-d090-4491-857d-04958b2ec87f\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"3b6892ce-28e9-4487-8c7f-7ad71dc7128d\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"39a18982-fff5-4a52-b972-5f77064690e2\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"863bbbe0-ab8e-493f-8f67-8ecddc9c0241\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"528b56fd-0ac7-4aea-ae1b-4d28cd2fcaff\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"412720d9-8297-486b-b823-022c8d4c84ab\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"ccaaef6b-d2b9-414f-9b8b-3e9f6341d806\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"40a2982e-518e-42f7-828e-af83c5cb194a\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"9c3110a6-8323-4ef8-bd7a-270a38824b13\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"db067438-6b52-491f-8245-0eca881d2498\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"2a6c61ff-854c-402f-9b8b-1750b47266c5\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"568f351f-376c-4f60-a7f8-6a5f284ba01b\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"a1e4e14b-195f-44d2-885c-8dd2638be6c8\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"e9424772-dfb3-4716-bc6c-5044ef1c4bb6\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"6f596a7a-ef2e-472f-b84b-04494cb3f15f\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"444af030-5139-4640-bb5c-97a4260a1a03\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"e64ba918-36d9-4b14-826a-0bb2c76a379d\",\n        \"name\": \"James Mwangi\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"bafccd7d-9bd7-4c03-9bae-3116149e5456\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"cb67b63c-51b1-413f-9523-4f43b3730a3a\",\n        \"name\": \"John Wafula\",\n        \"phoneNumber\": \"0719567380\"\n    },\n    {\n        \"id\": \"553e9c4c-df61-434e-9db4-0466b8fb08d4\",\n        \"name\": \"Allison Baker\",\n        \"phoneNumber\": \"0719567380\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/contacts/{{contactID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"{{contactID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get contact",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/contacts/553e9c4c-df61-434e-9db4-0466b8fb08d4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"contacts",
+								"553e9c4c-df61-434e-9db4-0466b8fb08d4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "95"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5f-RDLLMmpTri1CapzK9cdAszgvIG4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 Oct 2023 19:17:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"553e9c4c-df61-434e-9db4-0466b8fb08d4\",\n    \"name\": \"Allison Baker\",\n    \"phoneNumber\": \"0719567380\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Mick Kibet\",\n    \"phoneNumber\" : \"07121434332\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/contacts/{{contactID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"{{contactID}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update contact",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Mick Kibet\",\n    \"phoneNumber\" : \"07121434332\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/contacts/553e9c4c-df61-434e-9db4-0466b8fb08d4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"contacts",
+								"553e9c4c-df61-434e-9db4-0466b8fb08d4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "136"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"88-iWa9jRprr0hTMSfh9t1qvKv/I7c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 Oct 2023 19:18:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"553e9c4c-df61-434e-9db4-0466b8fb08d4\",\n    \"name\": \"a1db7ee84f30c2a657ac9add0f2030bb\",\n    \"phoneNumber\": \"0c133b3dfb2f25d3ab05c97de3fb83b5\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/contacts/{{contactID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"{{contactID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
