@@ -1,7 +1,7 @@
 import chai from "chai";
 import chaiHttp from "chai-http";
 import { app } from "../src/index";
-import { send } from "process";
+
 
 chai.use(chaiHttp);
 chai.should();
@@ -10,12 +10,19 @@ const testContact = {
     name: "John Wafula",
     phoneNumber: "0719567380",
 };
-const id = 8;
+const correctID = "ce3d1551-d090-4491-857d-04958b2ec87f";
+const inCorrectID = 8;
+const nonExistingID = "ce3d1951-d090-4491-857d-04958b2ec87f";
 
-const testContactWithMissingValues = {
+const testContactWithMissingName = {
     name: "",
+    phoneNumber: "0719567380",
+};
+const testContactWithMissingPhoneNumber = {
+    name: "John Wafula",
     phoneNumber: "",
 };
+
 
 describe("Contacts Router module", () => {
     describe("Retrieve contacts", () => {
@@ -28,11 +35,29 @@ describe("Contacts Router module", () => {
                     done();
                 });
         });
-        it("should get a single contact record", (done) => {
+        it("should get a contact record whith the correct id format", (done) => {
             chai.request(app)
-                .get(`/api/contacts/${id}`)
+                .get(`/api/contacts/${correctID}`)
                 .end((err, res) => {
                     res.should.have.status(200);
+                    res.body.should.be.a("object");
+                    done();
+                });
+        });
+        it("should not get a contact record with the incorrect id format", (done) => {
+            chai.request(app)
+                .get(`/api/contacts/${inCorrectID}`)
+                .end((err, res) => {
+                    res.should.have.status(400);
+                    res.body.should.be.a("object");
+                    done();
+                });
+        });
+        it("should not get a contact record since it does not exist", (done) => {
+            chai.request(app)
+                .get(`/api/contacts/${nonExistingID}`)
+                .end((err, res) => {
+                    res.should.have.status(404);
                     res.body.should.be.a("object");
                     done();
                 });
@@ -40,7 +65,7 @@ describe("Contacts Router module", () => {
     });
 
     describe("Create a contact", () => {
-        it("should create a contact", (done) => {
+        it("should create a contact if name and phone number are provided", (done) => {
             chai.request(app)
                 .post("/api/contacts")
                 .send(testContact)
@@ -50,10 +75,20 @@ describe("Contacts Router module", () => {
                     done();
                 });
         });
-        it("should not create a contact missing values", (done) => {
+        it("should not create a contact if name was not provided", (done) => {
             chai.request(app)
                 .post("/api/contacts")
-                .send(testContactWithMissingValues)
+                .send(testContactWithMissingName)
+                .end((err, res) => {
+                    res.should.have.status(400);
+                    res.body.should.be.a("object");
+                    done();
+                });
+        });
+        it("should not create a contact if phone number was not provided", (done) => {
+            chai.request(app)
+                .post("/api/contacts")
+                .send(testContactWithMissingPhoneNumber)
                 .end((err, res) => {
                     res.should.have.status(400);
                     res.body.should.be.a("object");
@@ -63,12 +98,53 @@ describe("Contacts Router module", () => {
     });
 
     describe("Update a contact", () => {
-        it("should update a contact with the id passed", (done) => {
+        it("should update a contact when correct id format is passed", (done) => {
             chai.request(app)
-                .put(`/api/contacts/${id}`)
+                .put(`/api/contacts/${correctID}`)
                 .send(testContact)
                 .end((err, res) => {
                     res.should.have.status(200);
+                    res.body.should.be.a("object");
+                    done();
+                });
+        });
+
+        it("should not update a contact when incorrect id format is passed", (done) => {
+            chai.request(app)
+                .put(`/api/contacts/${inCorrectID}`)
+                .send(testContact)
+                .end((err, res) => {
+                    res.should.have.status(400);
+                    res.body.should.be.a("object");
+                    done();
+                });
+        });
+        it("should not update a contact record since it does not exist", (done) => {
+            chai.request(app)
+                .put(`/api/contacts/${nonExistingID}`)
+                .end((err, res) => {
+                    res.should.have.status(404);
+                    res.body.should.be.a("object");
+                    done();
+                });
+        });
+    });
+    describe("Delete a contact", () => {
+        it("should not delete a contact when incorrect id format is passed", (done) => {
+            chai.request(app)
+                .delete(`/api/contacts/${inCorrectID}`)
+                .send(testContact)
+                .end((err, res) => {
+                    res.should.have.status(400);
+                    res.body.should.be.a("object");
+                    done();
+                });
+        });
+        it("should not delete a contact record since it does not exist", (done) => {
+            chai.request(app)
+                .delete(`/api/contacts/${nonExistingID}`)
+                .end((err, res) => {
+                    res.should.have.status(404);
                     res.body.should.be.a("object");
                     done();
                 });
