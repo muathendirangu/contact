@@ -1,13 +1,13 @@
 # contact
-a rest api for contact management
+A rest api for contact management
 
-##  Getting setup
+##  Running locally setup
 
 To get started, clone this repository and install the dependencies:
 
-`git clone https://github.com/muathendirangu/contact.git`
-`cd contact`
-`npm install`
+1. first clone the repo using `git clone https://github.com/muathendirangu/contact.git`.
+2. access directory `cd contact`.
+3. Install dependencies `npm install`
 
 Once the dependencies are installed, you can start the API:
 
@@ -24,22 +24,11 @@ To run test run the command
 
 The API has the following endpoints:
 
-`/contacts` - Get all contacts
-`/contacts/:id` - Get a contact by ID
-`/contacts` - Create a new contact
-`/contacts/:id` - Update a contact
-`/contacts/:id` - Delete a contact
-
-## Usage
-
-To use the API, you can send HTTP requests to the endpoints.
-1. To get all contacts, you would send a GET request to the /contacts endpoint.
-
-2. To create a new contact, you would send a POST request to the /contacts endpoint with the contact's information in the request body.
-
-3. To update a contact, you would send a PUT request to the /contacts/:id endpoint with the contact's updated information in the request body.
-
-4. To delete a contact, you would send a DELETE request to the /contacts/:id endpoint.
+1. `/contacts` - Get all contacts.
+2. `/contacts/:id` - Get a contact by ID.
+3. `/contacts` - Create a new contact.
+4. `/contacts/:id` - Update a contact.
+5. `/contacts/:id` - Delete a contact.
 
 # Example
 
