@@ -3,7 +3,6 @@
  * import data model interfaces
  *
  */
-import { UUID } from 'crypto';
 import {
   Contact
 } from './contact.interface';

@@ -66,11 +66,13 @@ contactsRouter.get('/', async (req: Request, res: Response) => {
     try {
         const contacts: Contact[] = await ContactService.findAllContacts();
         const contactsResponse = await decryptContacts(contacts);
-        res.status(200).send(contactsResponse);
         logger.info(`status:${res.statusCode} => GET all contacts request completed successfully`);
+        res.status(200).send(contactsResponse);
+        return
     } catch (error) {
-        res.status(500).send(error);
         logger.error(`status:${res.statusCode} => GET all contacts request failed with error:${error}`);
+        res.status(500).send(error);
+        return
     }
 });
 // GET Contacts/:id
@@ -95,15 +97,18 @@ contactsRouter.get('/:id', async (req: Request, res: Response) => {
             }
             logger.info(`status:${res.statusCode} => GET contact by id request completed successfully for id: ${id}`);
             res.status(200).send(contactResponse);
+            return
         } else {
             logger.info(` status:${404} => GET no contact with id:${id}`);
             res.status(404).send({
                 "error": "Contact not found"
             });
+            return
         }
     } catch (error) {
         logger.error(` status:${res.statusCode} => GET contact by id request failed with error: ${error}`);
         res.status(500).send(error);
+        return
     }
 });
 // POST Contacts
@@ -193,11 +198,13 @@ contactsRouter.delete("/:id", async (req: Request, res: Response) => {
             await ContactService.removeContact(id);
             logger.info(`status:${res.statusCode} => DELETE contact request completed successfully for id: ${id}`);
             res.sendStatus(204);
+            return
         } else {
             logger.info(` status:${404} => DELETE no contact with id:${id}`);
             res.status(404).send({
                 "error": "Contact not found"
             });
+            return
         }
         return
     } catch (error) {
