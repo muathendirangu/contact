@@ -79,7 +79,7 @@ contactsRouter.get('/:id', async (req: Request, res: Response) => {
         const id: string = req.params.id;
         if (!validateUUID(id)) {
             logger.info(`status:${400} => GET contact by id request failed for faulty id: ${id}`);
-            res.status(200).send({
+            res.status(400).send({
                 "error": "invalid id parameter"
             });
             return
@@ -114,7 +114,7 @@ contactsRouter.post('/', async (req: Request, res: Response) => {
             phoneNumber
         } = req.body;
         if (name.length == 0 || phoneNumber.length == 0) {
-            logger.error(`status:${res.statusCode} => POST new contact request failed with error: name or phone number must be provided`);
+            logger.error(`status:${400} => POST new contact request failed with error: name or phone number must be provided`);
             res.status(400).send({
                 "error": "name or phone number must be provided"
             });
@@ -143,7 +143,7 @@ contactsRouter.put("/:id", async (req: Request, res: Response) => {
         const id: string = req.params.id;
         if (!validateUUID(id)) {
             logger.info(`status:${400} => PUT update contact by id request failed for faulty id: ${id}`);
-            res.status(200).send({
+            res.status(400).send({
                 "error": "invalid id parameter",
             });
             return
@@ -183,7 +183,7 @@ contactsRouter.delete("/:id", async (req: Request, res: Response) => {
         const id: string = req.params.id;
         if (!validateUUID(id)) {
             logger.info(`status:${400} => PUT update contact by id request failed for faulty id: ${id}`);
-            res.status(200).send({
+            res.status(400).send({
                 "error": "invalid id parameter"
             });
             return
