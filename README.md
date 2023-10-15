@@ -9,6 +9,8 @@ To get started, clone this repository and install the dependencies:
 2. access directory `cd contact`.
 3. Install dependencies `npm install`
 
+# Note:
+SQLITE database was utilized(contacts.db is part of files on this repository)
 Once the dependencies are installed, you can start the API:
 
 `npm run dev`
@@ -96,9 +98,11 @@ curl --location 'http://localhost:9000/api/contacts'
 3. Generated API documentation a postman and and openAPI documentation(currently it is done manually can be automated using npm packages to improve dev workflow)
 
 ## Improvements
-1. Automate API documentation
+1. Setup CI/CD pipelines to automate API documentation generation, also deployment of the API to a hosting provider
 2. Modularize the storage workflow to allow easier addition of data store i.e if we need to to introduce new data store
-e.g redis for caching purposes
+e.g redis for caching purposes.
+4. Add support for database migrations.
+3. Improve the testing workflow to make it easier to mock a test database instead of the actual database, add more unit tests to test pure functions i.e validation utils.
 
 
 
