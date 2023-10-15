@@ -15,8 +15,8 @@ import {
 
 
 export const getContacts = async (): Promise < Contact[] > => {
-    return new Promise < Contact[] > ((resolve, reject) => {
-        db.all('SELECT * FROM contacts', (err, rows: Contact[]) => {
+    return new Promise <Contact[] > ((resolve, reject) => {
+         db.all('SELECT * FROM contacts', (err, rows: Contact[]) => {
             if (err) {
                 reject(err);
             } else {
