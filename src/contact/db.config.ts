@@ -2,7 +2,6 @@
  * import the required external modules
  */
 import sqlite3 from "sqlite3";
-import fs from "fs";
 
 const dbPath = "contacts.db";
 
@@ -20,7 +19,7 @@ db.get(
             // The "contacts" table does not exist, so create it
             db.run(`
         CREATE TABLE contacts (
-          id INTEGER PRIMARY KEY,
+          id TEXT PRIMARY KEY,
           name TEXT,
           phoneNumber TEXT
         )
