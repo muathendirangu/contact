@@ -85,7 +85,7 @@ curl --location 'http://localhost:9000/api/contacts'
 - This will return a list of all contacts in the db.
 
 ## complete features
-1. - Create a new contact
+1. Create a new contact
 2. Get all contacts
 3. Get a specific contact
 4. Update a contact
