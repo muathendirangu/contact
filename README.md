@@ -8,6 +8,7 @@ To get started, clone this repository and install the dependencies:
 1. first clone the repo using `git clone https://github.com/muathendirangu/contact.git`.
 2. access directory `cd contact`.
 3. Install dependencies `npm install`
+4.  Rename `.env.example` to .`.env` and update the environment variables(for the ENCRYPTION_KEY you can default to `anyrandomvalue`, for ALGORITHM you can use any of commonly used encryption algorithm default to `des-ede3`,DB default value is `contacts.db`)
 
 # Note:
 SQLITE database was utilized(contacts.db is part of files on this repository)
